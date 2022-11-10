@@ -11,6 +11,6 @@ class Anaf extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-anaf';
+        return \Andali\Anaf\Anaf::class;
     }
 }
