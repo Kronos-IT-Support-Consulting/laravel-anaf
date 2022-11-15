@@ -15,7 +15,8 @@ trait CompanyFinancial
             ->__toString();
 
         /* @var array $info */
-        $info = Http::withHeaders(['Content-Type' => 'application/json'])->retry(10,50)
+
+        $info = Http::withHeaders(['Content-Type' => 'application/json'])->retry(100, 50)
             ->get($this->bilantUrl, [
                 'cui' => $vatNumber,
                 'an' => $year,

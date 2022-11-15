@@ -16,7 +16,7 @@ trait CompanyDetails
             ->__toString();
 
         /* @var array $info */
-        $info = Http::withHeaders(['Content-Type' => 'application/json'])->retry(3,100)
+        $info = Http::withHeaders(['Content-Type' => 'application/json'])->retry(3, 100)
             ->post($this->vatUrl, [
                 [
                     'cui' => $vatNumber,
