@@ -2,13 +2,13 @@
 
 namespace Andali\Anaf\Domain\Info\Casts;
 
-use Andali\Anaf\Domain\Info\LocationData;
+use Andali\Anaf\Domain\Info\AdresaSediuSocial;
 use Spatie\LaravelData\Casts\Cast;
 use Spatie\LaravelData\Support\DataProperty;
 
 class AddressCast implements Cast
 {
-    public function cast(DataProperty $property, mixed $value, array $context): LocationData
+    public function cast(DataProperty $property, mixed $value, array $context): AdresaSediuSocial
     {
         $adresa = [];
 
@@ -34,6 +34,6 @@ class AddressCast implements Cast
         // Parse altele
         $adresa['altele'] = trim($altele);
 
-        return LocationData::from($adresa);
+        return AdresaSediuSocial::from($adresa);
     }
 }

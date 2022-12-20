@@ -10,7 +10,7 @@ class Anaf
     use CompanyDetails;
     use CompanyFinancial;
 
-    public const VAT_URL = 'https://webservicesp.anaf.ro/PlatitorTvaRest/api/v6/ws/tva';
+    public const VAT_URL = 'https://webservicesp.anaf.ro/PlatitorTvaRest/api/v7/ws/tva';
 
     public const BILANT_URL = 'https://webservicesp.anaf.ro/bilant';
 

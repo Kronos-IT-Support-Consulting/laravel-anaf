@@ -24,12 +24,15 @@ trait CompanyDetails
                 ],
             ])->json();
 
-        $companyInfo = AnafData::from($info['found'][0]);
-
-        if (filled($companyInfo->denumire)) {
-            return $companyInfo;
-        } else {
+        if(in_array($vatNumber, $info['notFound'])) {
             throw VatNumberNotFound::make();
+        } else {
+            $companyInfo = AnafData::from($info['found'][0]);
+            if (filled($companyInfo->date_generale?->cui)) {
+                return $companyInfo;
+            } else {
+                throw VatNumberNotFound::make();
+            }
         }
     }
 }
