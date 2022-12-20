@@ -24,7 +24,7 @@ trait CompanyDetails
                 ],
             ])->json();
 
-        if(in_array($vatNumber, $info['notFound'])) {
+        if (in_array($vatNumber, $info['notFound'])) {
             throw VatNumberNotFound::make();
         } else {
             $companyInfo = AnafData::from($info['found'][0]);
