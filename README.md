@@ -15,20 +15,21 @@ composer require andalisolutions/laravel-anaf
 
 ## Usage
 
-For company details you can use:
+For company details you can use ([ANAF Api v7 info](https://static.anaf.ro/static/10/Anaf/Informatii_R/Servicii_web/doc_WS_V7.txt)):
 ```php
 use Andali\Anaf\Anaf;
 
 $companyInfo = Anaf::for($vatNumber)->info();
 /* AND YOU CAN ACCESS */
-$companyInfo->denumire;
-$companyInfo->adresa->judet;
-$companyInfo->adresa->localitate;
-$companyInfo->adresa->strada;
-$companyInfo->adresa->stradaNumar;
-$companyInfo->nrRegCom;
-$companyInfo->scpTVA; // if the company is registered as a TVA payer in Romania;
-// and more
+$companyInfo->date_generale->cui;
+$companyInfo->date_generale->denumire;
+...
+$companyInfo->inregistrare_scop_Tva->scpTVA (bool);
+$companyInfo->inregistrare_scop_Tva->data_inceput_ScpTVA (Carbon);
+...
+$companyInfo->adresa_sediu_social (object);
+$companyInfo->adresa_domiciliu_fiscal (object);
+...
 ```
 For financial info you can use:
 ```php
