@@ -5,7 +5,6 @@ namespace Andali\Anaf\Domain\Info;
 use Andali\Anaf\Domain\Info\Casts\DateCast;
 use Carbon\Carbon;
 use Spatie\LaravelData\Attributes\WithCast;
-use Spatie\LaravelData\Casts\DateTimeInterfaceCast;
 use Spatie\LaravelData\Data;
 
 class DateGenerale extends Data

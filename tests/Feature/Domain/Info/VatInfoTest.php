@@ -1,9 +1,7 @@
 <?php
 
 use Andali\Anaf\Anaf;
-use Andali\Anaf\Domain\Info\Casts\DateCast;
 use Carbon\Carbon;
-use Spatie\LaravelData\Attributes\WithCast;
 
 it('it will get info for vat numbers', function ($vatNumber) {
     $result = Anaf::for($vatNumber)->info();
