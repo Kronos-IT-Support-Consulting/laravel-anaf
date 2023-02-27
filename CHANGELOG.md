@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-anaf` will be documented in this file.
 
+## v2.1.0 - 2023-02-27
+
+Laravel 10 support
+
 ## v2.0.0 - 2022-12-20
 
 Update to [ANAF Api V7](https://static.anaf.ro/static/10/Anaf/Informatii_R/Servicii_web/doc_WS_V7.txt)
